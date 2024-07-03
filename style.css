@@ -88,22 +88,53 @@ img {
 
 .button {
     display: block;
+    padding: 16px 24px;
     text-decoration: none;
     text-align: center;
     font-weight: 700;
     border-radius: 16px;
-    padding: 16px 24px;
+    color: inherit;
+    transition: .3s ease-in-out;
     transition: .3s ease-in-out;
 }
 
 .link {
     font-weight: 700;
+    transition: .3s ease-in-out;
 }
 
 .button--accent {
     background-color: var(--accent);
     color: var(--element-bg);
     box-shadow: 0 10px 20px -5px hsla(245, 75%, 52%, 0.55);
+}
+
+@media (hover: hover) {
+    .button--accent:is(:hover, :focus-visible) {
+        filter: brightness(1.25);
+    }
+
+    .button--secondary:is(:hover, :focus-visible) {
+        color: var(--text-accent);
+    }
+
+    .link:is(:hover, :focus-visible) {
+        text-decoration: none;
+        filter: brightness(1.25);
+    }
+}
+
+.button--accent:active {
+    filter: brightness(1.05);
+}
+
+.button--secondary:active {
+    color: var(--text-accent);
+}
+
+.link:active {
+    text-decoration: none;
+    filter: brightness(1.25);
 }
 
 .card>.decor {
