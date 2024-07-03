@@ -198,3 +198,16 @@ img {
     }
 
 }
+
+.attribution {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    translate: -50% 0;
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: var(--accent);
+}
