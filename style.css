@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+    --main-bg: hsl(225, 100%, 94%);
+    --accent: hsl(245, 75%, 52%);
+
+
+    --element-bg: hsl(225, 100%, 98%);
+    --text: hsl(224, 23%, 55%);
+    --text-accent: hsl(223, 47%, 23%);
+
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+
+    font-family: "Red Hat Display", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    color: var(--text);
+}
+
+main {
+    height: 100vh;
+    height: 100svh;
+    padding: 24px;
+    display: grid;
+    place-items: center;
+    background: var(--main-bg) url('./images/pattern-background-mobile.svg') no-repeat;
+    background-size: 100% auto;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.card,
+.card .content {
+    width: 100%;
+    max-width: 450px;
+
+    display: grid;
+    justify-items: stretch;
+    align-content: center;
+    background-color: var(--element-bg);
+    border-radius: 24px;
+}
+
+.card .content {
+    padding: 24px;
+    padding-top: 0;
+}
+
+.title,
+.text {
+    margin: 0;
+}
+
+.title {
+    color: var(--text-accent);
+    font-weight: 900;
+    letter-spacing: -0.01em;
+}
+
+.title--main,
+.lead {
+    text-align: center;
+}
+
+.title--main {
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+.lead {
+    margin-bottom: 32px;
+    line-height: 1.5;
+}
+
+.button {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 700;
+    border-radius: 16px;
+    padding: 16px 24px;
+    transition: .3s ease-in-out;
+}
+
+.link {
+    font-weight: 700;
+}
+
+.button--accent {
+    background-color: var(--accent);
+    color: var(--element-bg);
+    box-shadow: 0 10px 20px -5px hsla(245, 75%, 52%, 0.55);
+}
+
+.card>.decor {
+    height: 162px;
+    max-width: 100%;
+    margin-bottom: 32px;
+    border-radius: 24px 24px 0 0;
+    overflow: hidden;
+}
+
+.card>.decor>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.selection {
+    margin-bottom: 24px;
+    padding: 16px;
+    border-radius: 16px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto auto 1fr;
+    gap: 20px;
+    background-color: hsla(225, 100%, 94%, 0.3);
+}
+
+.selection *:last-child {
+    justify-self: end;
+}
+
+.selection .decor {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--main-bg) url('./images/icon-music.svg') no-repeat;
+}
+
+.selection .title {
+    font-size: 16px;
+}
+
+.selection+.button {
+    margin-bottom: 10px;
+}
+
+@media (min-width: 650px) {
+    body {
+        font-size: 16px;
+    }
+
+    main {
+        background-image: url('./images/pattern-background-desktop.svg');
+    }
+
+    .card .content {
+        padding: 0 48px 48px;
+    }
+
+    .title--main {
+        margin-bottom: 20px;
+        font-size: 28px;
+    }
+
+    .lead {
+        margin-bottom: 20px;
+    }
+
+    .button {
+        display: block;
+        text-decoration: none;
+        text-align: center;
+        font-weight: 700;
+        border-radius: 16px;
+        padding: 16px 24px;
+        transition: .3s ease-in-out;
+    }
+
+    .card>.decor {
+        height: 220px;
+        margin-bottom: 46px;
+    }
+
+    .selection {
+        margin-bottom: 36px;
+        padding: 24px;
+    }
+
+    .selection+.button {
+        margin-bottom: 14px;
+    }
+
+}
